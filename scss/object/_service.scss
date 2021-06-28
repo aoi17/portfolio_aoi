@@ -1,0 +1,65 @@
+.service {
+  background-image: url(../image/service.jpg);
+  background-size: cover;
+  background-position: center;
+  .sec-title {
+    padding-top: 30px;
+    font-size: 50px;
+    text-align: center;
+  }
+  .service-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    .service-list {
+      display: flex;
+      .item {
+        position: relative;
+        .service-img {
+          height: 300px;
+          margin-bottom: 20px;
+          img {
+            height: 100%;
+          }
+        }
+        .service-name {
+          text-align: center;
+          font-size: 25px;
+        }
+        .service-text {
+          text-align: center;
+          background-color: rgba(255, 222, 173, 0.9);
+          padding: 10px;
+        }
+        + .item {
+          margin-left: 20px;
+        }
+      }
+    }
+    p {
+      margin-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  }
+}
+
+// レスポンシブ対応
+//　sp版
+@media screen and (max-width: 639px) {
+  .service {
+    .service-wrap {
+      .service-list {
+        display: block;
+        .item {
+          + .item {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+// タブレット版
+@media screen and (min-width: 640px) and (max-width: 959px) {
+}

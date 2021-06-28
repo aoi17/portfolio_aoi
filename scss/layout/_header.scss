@@ -1,0 +1,78 @@
+.header {
+  .nav-btn {
+    position: fixed;
+    top: 3%;
+    right: 4%;
+    height: 38px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 2;
+    transition: opacity 0.25s ease;
+    span {
+      background-color: #000;
+      border: none;
+      height: 5px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.35s ease;
+      cursor: pointer;
+      &:nth-child(2) {
+        top: 11px;
+      }
+      &:last-child {
+        top: 22px;
+      }
+    }
+    &.-active {
+      span {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: transform 0.3s ease;
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .header-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    &.-active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease;
+    }
+    .nav-wrap {
+      .nav-list {
+        text-align: center;
+        font-size: 50px;
+        .item {
+          + .item {
+            margin-top: 25px;
+          }
+          a {
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}

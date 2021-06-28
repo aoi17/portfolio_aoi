@@ -1,0 +1,30 @@
+.skill {
+  background-image: url(../image/skill.jpg);
+  background-size: cover;
+  background-position: center;
+  .sec-title {
+    padding-top: 30px;
+    font-size: 50px;
+    text-align: center;
+  }
+  .skills-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 100px;
+    .skills-list {
+      justify-content: center;
+      display: flex;
+      background-color: rgba(255, 245, 238, 0.8);
+      padding: 50px;
+      border-radius: 10px;
+      .item {
+        background-color: #fff;
+        img {
+        }
+        + .item {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

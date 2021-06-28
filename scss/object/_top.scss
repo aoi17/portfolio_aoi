@@ -1,0 +1,37 @@
+.top {
+  background-image: url(../image/topbg.jpg);
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  .top-title {
+    width: 100%;
+    // text-align: center;
+    // padding-top: 200px;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    // -webkit-transform: translateY(-50%) translateX(-50%);
+    // -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    span {
+    }
+  }
+}
+// レスポンシブ対応
+@media screen and (max-width: 639px) {
+  .top {
+    .top-title {
+      font-size: 30px;
+    }
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 959px) {
+  .top {
+    .top-title {
+      font-size: 50px;
+    }
+  }
+}
